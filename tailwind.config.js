@@ -4,5 +4,8 @@ module.exports = {
   theme: {
     extend: {},
   },
+  fontFamily: {
+    display: ["Josefin Sans", "normal"],
+  },
   plugins: [],
 };
