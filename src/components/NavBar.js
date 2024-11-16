@@ -32,7 +32,7 @@ const NavBar = () => {
 
         <h1 className="md:hidden text-xl font-bold">Sushant Tripathee</h1>
         <button
-          className="md:hidden text-3xl"
+          className="md:hidden text-3xl transform transition-all duration-200 hover:scale-110"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <IoIosArrowUp /> : <IoMenu />}
@@ -40,20 +40,24 @@ const NavBar = () => {
 
         <nav className={isOpenStyleNav}>
           <span className="hover:underline hover:text-[#df5e4d] mx-10">
-            <Link to="/about">Home</Link>
+            <Link to="/">Home</Link>
           </span>
-          <span className="hover:underline hover:text-[#df5e4d] mx-10">
-            <Link to="/skills">Skills</Link>
-          </span>
+
           <span className="hover:underline hover:text-[#df5e4d] mx-10">
             <Link to="/projects">Projects</Link>
           </span>
           <span className="hover:underline hover:text-[#df5e4d] mx-10">
-            <Link to="/Contacts">Contacts</Link>
+            <Link to="/about">About me</Link>
+          </span>
+          <span className="hover:underline hover:text-[#df5e4d] mx-10">
+            <Link to="/Contacts">Contact</Link>
           </span>
         </nav>
 
-        <button onClick={toggleTheme} className="text-2xl">
+        <button
+          onClick={toggleTheme}
+          className="text-2xl transform transition-all duration-200 hover:scale-150"
+        >
           {isDarkMode ? <IoSunny /> : <IoMoon />}
         </button>
       </div>

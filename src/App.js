@@ -11,6 +11,7 @@ export default function App() {
       }`}
     >
       <NavBar />
+
       <Outlet />
     </div>
   );
