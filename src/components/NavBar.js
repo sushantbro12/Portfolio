@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
     <header
-      className={`top-0 flex justify-center items-center py-5 w-full text-lg bg-opacity-50 border-b border-gray-600`}
+      className={`top-0 flex justify-center items-center py-5 w-full text-lg bg-opacity-50 border-b border-gray-600 `}
     >
       <div className={isOpenStyle}>
         <a href="https://www.linkedin.com/in/sushant-tripathee-94a753280/">

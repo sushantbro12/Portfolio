@@ -6,7 +6,7 @@ export default function App() {
   const { isDarkMode } = useTheme();
   return (
     <div
-      className={`h-screen w-screen ${
+      className={`w-screen ${
         isDarkMode ? "bg-[#1a1b26] text-white" : "bg-white text-black"
       }`}
     >

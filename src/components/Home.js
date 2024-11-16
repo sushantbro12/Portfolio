@@ -3,7 +3,10 @@ import { TbDeviceDesktopCode } from "react-icons/tb";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-8 mt-20">
+    <div
+      style={{ height: "calc(100vh - 112px)" }}
+      className="flex flex-col items-center justify-center first-letter p-6"
+    >
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 text-center">
         Hey, I'm Sushant
       </h1>
