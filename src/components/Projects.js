@@ -1,61 +1,94 @@
 import React from "react";
 import Card from "./Card";
 
+import JavascriptIcon from "../assets/Icons/JavascriptIcon";
+import CssIcon from "../assets/Icons/CssIcon";
+import HtmlIcon from "../assets/Icons/HtmlIcon";
+import TailwindIcon from "../assets/Icons/TailwindIcon";
+import ReactIcon from "../assets/Icons/ReactIcon";
+import FirebaseIcon from "../assets/Icons/FirebaseIcon";
+import admindashboardimage from "../assets/images/dashboard.png";
+import cartimage from "../assets/images/cart.png";
+import weatherappimage from "../assets/images/weatherapp.png";
+
 const Projects = () => {
+  const TAGS = {
+    JAVASCRIPT: {
+      name: "JavaScript",
+      class: "text-[#777a92fa]",
+      icon: JavascriptIcon,
+    },
+    CSS: {
+      name: "CSS",
+      class: "text-[#777a92fa]",
+      icon: CssIcon,
+    },
+    FIREBASE: {
+      name: "Firebase",
+      class: "text-[#777a92fa]",
+      icon: FirebaseIcon,
+    },
+    HTML: {
+      name: "HTML",
+      class: "text-[#777a92fa]",
+      icon: HtmlIcon,
+    },
+    TAILWIND: {
+      name: "Tailwind",
+      class: "text-[#777a92fa]",
+      icon: TailwindIcon,
+    },
+    REACT: {
+      name: "React",
+      class: "text-[#777a92fa]",
+      icon: ReactIcon,
+    },
+  };
   const ProjectsList = [
     {
-      title: "React Dashboard",
+      title: "Admin Dashboard",
       description:
-        "A React-based dashboard application that allows users to manage and monitor various activities or data. It features interactive charts, tables, and responsive design for effective data presentation.",
-      link: "https://the-oak-nest.netlify.app/",
-      github: "https://github.com/GustavoMunizBarrios/the-oak-nest",
-      image:
-        "https://media.licdn.com/dms/image/v2/C4E12AQFdVr18zUa17Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624637761724?e=2147483647&v=beta&t=uOrqjZV7ZeSvE6euFcZVEuj-2yuec1FppjnE6IUYdzY",
+        "The Admin Dashboard is a React.js and Firebase-powered platform for efficient product, user, and order management. It features secure login, real-time updates, and CRUD functionalities for products and users.",
+      github: "https://github.com/sushantbro12/Admin-panel",
+      image: admindashboardimage,
+      tags: [
+        TAGS.REACT,
+        TAGS.JAVASCRIPT,
+        TAGS.HTML,
+        TAGS.TAILWIND,
+        TAGS.FIREBASE,
+      ],
+      link: "https://admin-panel-silk-eta.vercel.app/",
     },
     {
-      title: "Country Info App",
+      title: "Shopping Cart",
       description:
-        "A React app displaying country information such as population, area, and activities. Users can search and filter countries and save relevant data for reference.",
-      link: "https://pi-countries-frontend-production.up.railway.app/",
-      github: "https://github.com/GustavoMunizBarrios/pi-countries-frontend",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/0*y6IcBe5J1AdALzXw.png",
+        "A feature-rich shopping cart which includes functionalities for adding/removing items, dynamic price calculation, and inventory tracking. Users can view detailed product descriptions, ensuring an engaging and seamless shopping experience",
+
+      github: "https://github.com/sushantbro12/Shopping-Cart",
+      image: cartimage,
+      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.TAILWIND],
+      link: "https://shopping-cart-sage-zeta-82.vercel.app/",
     },
     {
-      title: "Movie Finder",
+      title: "Weather App",
       description:
-        "A React app that lets users search for movies, view detailed information, rate their favorites, and create a personalized list of movies to watch.",
-      link: "https://use-popcorn-opal-nine.vercel.app/",
-      github: "https://github.com/GustavoMunizBarrios/usePopcorn",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/0*y6IcBe5J1AdALzXw.png",
+        "A fully featured weather app with hourly and daily forecast.",
+
+      github: "https://github.com/sushantbro12/WeatherApp",
+      image: weatherappimage,
+      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.TAILWIND],
+      link: "https://weather-q9q8g2snw-sushant-tripathees-projects.vercel.app/",
     },
     {
-      title: "Character Wiki",
-      description:
-        "A React-based character wiki for a popular series, featuring an interactive UI to browse through different characters, apply filters, and use a search function.",
-      link: "https://rick-and-morty-frontend-production.up.railway.app/",
-      github: "https://github.com/GustavoMunizBarrios/rick-and-morty-",
+      title: "Project 4",
+      description: "Coming Soon",
+
+      github: "",
       image:
         "https://miro.medium.com/v2/resize:fit:1400/0*y6IcBe5J1AdALzXw.png",
-    },
-    {
-      title: "Task Manager",
-      description:
-        "A simple to-do list application built with React, allowing users to add, delete, and filter tasks. Includes day and night modes for enhanced user experience.",
-      link: "https://todo-app-one-dun.vercel.app/",
-      github: "https://github.com/GustavoMunizBarrios/todo-app",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/0*y6IcBe5J1AdALzXw.png",
-    },
-    {
-      title: "Packing List App",
-      description:
-        "A packing list app built with React to help users organize their travel essentials. Users can mark items as packed, delete them, and sort by description or status.",
-      link: "https://travel-list-pi-two.vercel.app/",
-      github: "https://github.com/GustavoMunizBarrios/travel-list",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/0*y6IcBe5J1AdALzXw.png",
+      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.HTML],
+      link: "",
     },
   ];
 
@@ -69,9 +102,9 @@ const Projects = () => {
                 image={image}
                 description={description}
                 title={title}
-                link={link}
                 github={github}
                 tags={tags}
+                link={link}
               />
             </div>
           )

@@ -3,7 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 import { HiExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 
-const Card = ({ image, description, title, link, github }) => {
+const Card = ({ image, description, title, github, tags, link }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isDarkMode } = useTheme();
 
@@ -36,18 +36,30 @@ const Card = ({ image, description, title, link, github }) => {
         <p p className="m-0 pl-1 text-2xl font-bold group hover:underline">
           <span className="flex items-center">
             {title}
-            <span className="ml-2 hidden group-hover:inline">
+            <a href={link} className="ml-2 hidden group-hover:inline">
               <HiExternalLink />
-            </span>
+            </a>
           </span>
         </p>
         <p className="mt-2 text-sm leading-relaxed">{description}</p>
 
         <div className="mt-4">
-          <button className="hover:scale-125">
-            <FaGithub size={30} />
-          </button>
+          <a href={github}>
+            <FaGithub className="hover:scale-125" size={30} />
+          </a>
         </div>
+        <ul className="flex gap-x-4 flex-row flex-wrap mt-5 items-center justify-center">
+          {tags.map((tag) => (
+            <li className="pb-4" key={tag.name}>
+              <span
+                className={`flex gap-x-2 border border-[#777a9247] rounded-full text-[0.7rem] xl:text-[0.9rem] ${tag.class} py-2 px-3`}
+              >
+                <tag.icon className="size-[1.2rem] " />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
