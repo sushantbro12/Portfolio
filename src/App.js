@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import { useTheme } from "./context/ThemeContext";
 
@@ -10,6 +11,7 @@ export default function App() {
       }`}
     >
       <NavBar />
+      <Outlet />
     </div>
   );
 }

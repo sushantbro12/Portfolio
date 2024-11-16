@@ -35,14 +35,22 @@ const NavBar = () => {
           className="md:hidden text-3xl"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <IoMenu />
+          {isOpen ? <IoIosArrowUp /> : <IoMenu />}
         </button>
 
         <nav className={isOpenStyleNav}>
-          <a className="hover:underline hover:text-[#df5e4d] mx-10">Home</a>
-          <a className="hover:underline hover:text-[#df5e4d] mx-10">Skills</a>
-          <a className="hover:underline hover:text-[#df5e4d] mx-10">Projects</a>
-          <a className="hover:underline hover:text-[#df5e4d] mx-10">Contacts</a>
+          <span className="hover:underline hover:text-[#df5e4d] mx-10">
+            <Link to="/about">Home</Link>
+          </span>
+          <span className="hover:underline hover:text-[#df5e4d] mx-10">
+            <Link to="/skills">Skills</Link>
+          </span>
+          <span className="hover:underline hover:text-[#df5e4d] mx-10">
+            <Link to="/projects">Projects</Link>
+          </span>
+          <span className="hover:underline hover:text-[#df5e4d] mx-10">
+            <Link to="/Contacts">Contacts</Link>
+          </span>
         </nav>
 
         <button onClick={toggleTheme} className="text-2xl">
