@@ -20,12 +20,12 @@ const NavBar = () => {
 
   return (
     <header
-      className={`top-0 flex justify-center items-center py-5 w-full text-lg bg-opacity-50 border-b border-gray-600 `}
+      className={` top-0 flex justify-center items-center py-5 w-full text-lg bg-opacity-50 border-b border-gray-600 `}
     >
       <div className={isOpenStyle}>
         <a href={picture}>
           <img
-            className="rounded-full size-20 transform transition-all duration-200 hover:scale-110 "
+            className="  rounded-full size-20 transform transition-all duration-200 hover:scale-110 "
             src="https://i.imgur.com/SoEuNHn.png"
             alt="sushant"
           />
@@ -47,9 +47,7 @@ const NavBar = () => {
           <span className="hover:underline hover:text-[#df5e4d] mx-10">
             <Link to="/projects">Projects</Link>
           </span>
-          <span className="hover:underline hover:text-[#df5e4d] mx-10">
-            <Link to="/about">About me</Link>
-          </span>
+
           <span className="hover:underline hover:text-[#df5e4d] mx-10">
             <Link to="/Contacts">Contact</Link>
           </span>

@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./context/ThemeContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
 
@@ -19,10 +18,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: "about",
-        element: <About />,
-      },
+
       {
         path: "projects",
         element: <Projects />,
