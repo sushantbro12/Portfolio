@@ -6,9 +6,9 @@ const Contacts = () => {
 
   return (
     <div
-      style={{ height: "calc(100vh - 65px)" }}
+      style={{ height: "calc(100vh - 140px)" }}
       name="contact"
-      className={`w-full p-4 ${
+      className={`w-full  p-4 pb-20 mt-5 ${
         isDarkMode ? "bg-[#1a1b26] text-white" : "bg-white text-gray-900"
       }`}
     >
