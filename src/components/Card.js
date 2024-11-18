@@ -16,7 +16,7 @@ const Card = ({ image, description, title, github, tags, link }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
-        className={`fill-current w-[22rem] xl:w-[31rem] rounded transition-transform duration-600 ${
+        className={`fill-current rounded transition-transform duration-600 h-full w-full  ${
           isHovered ? "scale-0" : "scale-100"
         }`}
         src={image}

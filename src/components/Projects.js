@@ -48,7 +48,7 @@ const Projects = () => {
     {
       title: "Admin Dashboard",
       description:
-        "The Admin Dashboard is a React.js and Firebase-powered platform for efficient product, user, and order management. It features secure login, real-time updates, and CRUD functionalities for products and users.",
+        "The Admin Dashboard is platform for efficient product, user, and order management. It features secure login, real-time updates, and CRUD functionalities for products and users.",
       github: "https://github.com/sushantbro12/Admin-panel",
       image: admindashboardimage,
       tags: [
@@ -63,7 +63,7 @@ const Projects = () => {
     {
       title: "Shopping Cart",
       description:
-        "A feature-rich shopping cart which includes functionalities for adding/removing items, dynamic price calculation, and inventory tracking. Users can view detailed product descriptions, ensuring an engaging and seamless shopping experience",
+        "A feature-rich shopping cart which includes functionalities for adding/removing items, dynamic price calculation, and inventory tracking.",
 
       github: "https://github.com/sushantbro12/Shopping-Cart",
       image: cartimage,

@@ -6,61 +6,85 @@ const Contacts = () => {
 
   return (
     <div
-      style={{ height: "calc(100vh - 140px)" }}
-      name="contact"
-      className={`w-full  p-4 pb-20 mt-5 ${
+      className={`w-full p-4 pb-16 mt-5 ${
         isDarkMode ? "bg-[#1a1b26] text-white" : "bg-white text-gray-900"
       }`}
+      style={{ minHeight: "calc(100vh - 140px)" }}
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8 mt-10">
-          <h1 className="py-6 text-3xl flex justify-center">
-            Submit the form below to get in touch with me
-          </h1>
-        </div>
-
-        <div className="flex justify-center items-center">
-          <form
-            action="https://getform.io/f/a4d115ce-e49c-44fd-a9b0-1319c96e6c7c"
-            method="POST"
-            className="flex flex-col w-full md:w-1/2"
+      <div className="flex flex-col justify-center items-center mx-auto">
+        <form
+          action="https://getform.io/f/a4d115ce-e49c-44fd-a9b0-1319c96e6c7c"
+          method="POST"
+          className={`flex flex-col w-full md:w-1/2 p-8 rounded-lg shadow-lg mt-9 ${
+            isDarkMode ? "bg-gray-800" : "bg-white"
+          }`}
+        >
+          <h2
+            className={`text-2xl font-bold text-center mb-6 ${
+              isDarkMode ? "text-gray-200" : "text-gray-800"
+            }`}
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              className={`p-2 border-2 rounded-md focus:outline-none ${
-                isDarkMode
-                  ? "bg-gray-800 border-gray-600 text-white"
-                  : "bg-white border-gray-300 text-black"
-              }`}
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Enter your email"
-              className={`my-4 p-2 border-2 rounded-md focus:outline-none ${
-                isDarkMode
-                  ? "bg-gray-800 border-gray-600 text-white"
-                  : "bg-white border-gray-300 text-black"
-              }`}
-            />
-            <textarea
-              name="message"
-              placeholder="Enter your message"
-              rows="10"
-              className={`p-2 border-2 rounded-md focus:outline-none ${
-                isDarkMode
-                  ? "bg-gray-800 border-gray-600 text-white"
-                  : "bg-white border-gray-300 text-black"
-              }`}
-            ></textarea>
+            Contact Me
+          </h2>
 
-            <button className="text-white font-bold bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Let's talk
-            </button>
-          </form>
-        </div>
+          <label htmlFor="name" className="sr-only">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            aria-label="Name"
+            className={`p-4 mb-4 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+              isDarkMode
+                ? "bg-gray-800 border-gray-600 text-white"
+                : "bg-white border-gray-300 text-gray-800"
+            }`}
+            required
+          />
+
+          <label htmlFor="email" className="sr-only">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            aria-label="Email"
+            className={`p-4 mb-4 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+              isDarkMode
+                ? "bg-gray-800 border-gray-600 text-white"
+                : "bg-white border-gray-300 text-gray-800"
+            }`}
+            required
+          />
+
+          <label htmlFor="message" className="sr-only">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            aria-label="Message"
+            rows="5"
+            className={`p-4 mb-6 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+              isDarkMode
+                ? "bg-gray-800 border-gray-600 text-white"
+                : "bg-white border-gray-300 text-gray-800"
+            }`}
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            className="text-white font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            Let's Talk
+          </button>
+        </form>
       </div>
       <SideBar />
     </div>
